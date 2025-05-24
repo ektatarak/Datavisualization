@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Work Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      background-color: #2c7be5;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #2c7be5;
+      margin-bottom: 20px;
+    }
+
+    .filters-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .filter-box {
+      flex: 1 1 250px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b5dc9;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 400px !important;
+    }
+
+    @media (max-width: 600px) {
+      .filters-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    📊 Student Work Analytics Dashboard
+  </header>
+
+  <div class="container">
+
+    <!-- Filters Section -->
+    <div class="section">
+      <h2>🔍 Filter Student Work Data</h2>
+      <div class="filters-group">
+        <div class="filter-box">
+          <label for="date">📅 Select Date:</label>
+          <select id="date">
+            <option value="all">All Dates</option>
+            <option value="4/10/2022">4/10/2022</option>
+            <option value="5/10/2022">5/10/2022</option>
+            <option value="6/10/2022">6/10/2022</option>
+            <option value="7/10/2022">7/10/2022</option>
+            <option value="8/10/2022">8/10/2022</option>
+            <option value="9/10/2022">9/10/2022</option>
+            <option value="10/10/2022">10/10/2022</option>
+            <option value="11/10/2022">11/10/2022</option>
+            <option value="12/10/2022">12/10/2022</option>
+            <option value="13/10/2022">13/10/2022</option>
+            <option value="14/10/2022">14/10/2022</option>
+            <option value="15/10/2022">15/10/2022</option>
+            <option value="16/10/2022">16/10/2022</option>
+            <option value="17/10/2022">17/10/2022</option>
+            <option value="18/10/2022">18/10/2022</option>
+            <option value="19/10/2022">19/10/2022</option>
+          </select>
+        </div>
+
+       
+        <div class="filter-box">
+          <label for="age">👤 Select Age Group:</label>
+          <select id="age">
+            <option value="all">All Ages</option>
+            <option value="15-25">15 to 25</option>
+            <option value=">25">Above 25</option>
+          </select>
+        </div>
+
+
+        <div class="filter-box">
+          <label for="gender">⚥ Select Gender:</label>
+          <select id="gender">
+            <option value="all">All Genders</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+         </div>
+         </div>
+
+      <button onclick="applyFilters()">🎯 Apply Filters</button>
+    </div>
+
+    <!-- Bar Chart Section -->
+    <div class="section">
+      <h2>📊 Bar Chart - Work Performance</h2>
+      <canvas id="workChart"></canvas>
+    </div>
+
+    <!-- Line Chart Section -->
+    <div class="section">
+      <h2>📈 Line Chart - Performance Over Time</h2>
+      <canvas id="lineChart"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Chart.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

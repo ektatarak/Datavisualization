@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.filters {
+    margin: 20px;
+}
+
+.chart-container {
+    width: 80%;
+    max-width: 800px;
+}
+
+canvas {
+    background-color: #f0f0f0;
+    width: 100% !important; /* Ensure canvas takes full width */
+    height: 400px !important; /* Ensure canvas has height */
+}
