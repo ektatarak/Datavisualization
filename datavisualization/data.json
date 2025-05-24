@@ -1,8 +1,0 @@
-[
-    { "name": "Anita", "age": 22, "gender": "female", "date": "2023-10-01", "score": 85 },
-    { "name": "Ravi", "age": 28, "gender": "male", "date": "2023-10-01", "score": 75 },
-    { "name": "Pooja", "age": 19, "gender": "female", "date": "2023-10-02", "score": 95 },
-    { "name": "Amit", "age": 32, "gender": "male", "date": "2023-10-03", "score": 60 },
-    { "name": "Neha", "age": 25, "gender": "female", "date": "2023-10-03", "score": 88 }
-  ]
-  
